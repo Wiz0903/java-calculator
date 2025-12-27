@@ -9,6 +9,7 @@ public class Calculator {
       // Ask the user for the starting number
       System.out.print("Enter starting number: ");
       int result = input.nextInt(); // Store starting number in result
+      int num;
       
       int choice = 0; // Variable to store the user's menu choice
       
@@ -25,30 +26,35 @@ public class Calculator {
          // Ask user to choose an operation
          System.out.print("Choose option: ");
          choice = input.nextInt();
-         
-         // Addition
-         if (choice == 1) {
-            System.out.print("Enter a number: ");
-            int num = input.nextInt();
-            result += num; // Add number to result
+
+         switch (choice) {
+            // Addition
+            case 1:
+               System.out.print("Enter a number: ");
+               num = input.nextInt();
+               result += num; // Add number to result
+               break;
             
-         // Subtraction
-         } else if (choice == 2) {
-            System.out.print("Enter a number: ");
-            int num = input.nextInt();
-            result -= num; // Subtract number from result
+            // Subtraction
+            case 2:
+               System.out.print("Enter a number: ");
+               num = input.nextInt();
+               result -= num; // Subtract number from result
+               break;
             
-         // Multiplication
-         } else if (choice == 3) {
-            System.out.print("Enter a number: ");
-            int num = input.nextInt();
-            result *= num; // Multiply result by number
+            // Multiplication
+            case 3:
+               System.out.print("Enter a number: ");
+               num = input.nextInt();
+               result *= num; // Multiply result by number
+               break;
          
-         // Division
-         } else if (choice == 4) {
-            System.out.print("Enter a number: ");
-            int num = input.nextInt();
-            result /= num; // Divide result by number
+            // Division
+            case 4:
+               System.out.print("Enter a number: ");
+               num = input.nextInt();
+               result /= num; // Divide result by number
+               break;
          }
        }
        
