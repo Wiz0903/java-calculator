@@ -51,11 +51,15 @@ public class Calculator {
          
             // Division
             case 4:
-               System.out.print("Enter a number: ");
-               num = input.nextInt();
-               result /= num; // Divide result by number
+               try {
+                  System.out.print("Enter a number: ");
+                  num = input.nextInt();
+                  result /= num; // Divide result by number
+               } catch (ArithmeticException e) {
+                  System.out.println("Error: Cannot divide by zero. Result unchanged.");
+               }
                break;
-         }
+            }
        }
        
        // Display final result after exiting the loop
